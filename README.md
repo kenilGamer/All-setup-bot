@@ -9,7 +9,18 @@
 kenilGamer/kenilGamer is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
+Contact
+Any bug or suggestion !
+ - Contact With Me Discord: [`kenilgamer`](https://discord.gg/5Fqwh3u8xB)
+Server Support
 
+
+
+## code share by kenilgamer
+##
+
+
+run for replit code [`click me`](https://replit.com/@KenilGamers/ALL-IN-ONE)
 This is ALL IN ONE Discord Bot. All the credits goes to the respective owners, i don't meant to own it.
 ```env
 DISCORD_TOKEN=
