@@ -1,5 +1,15 @@
 { pkgs }: {
   deps = [
+    pkgs.nodejs-16_x
+    pkgs.nodejs
+    pkgs.nodejs
+    pkgs.haskellPackages.nix-output-monitor
+    pkgs.nodejs
+    pkgs.nodejs
+    pkgs.nix-output-monitor
+    pkgs.nodejs
+    pkgs.nodejs
+    pkgs.nix-output-monitor.our
     pkgs.run
     pkgs.openmolcas
     pkgs.nodejs-16_x
