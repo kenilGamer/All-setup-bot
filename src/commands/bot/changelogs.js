@@ -7,7 +7,7 @@ module.exports = async (client, interaction, args) => {
         thumbnail: client.user.avatarURL({ size: 2048 }),
         fields: [{
             name: "📃┆Changelogs",
-                value: '15/8/2023- Updated the bot to the latest version of discord.js (v14)'
+                value: '15/8/2023- Updated the bot to the latest version of discord.js (v14)\n' +
           'Godcraft bot update,Update api maximum bug fix,Add new commands,all music error fix,bot and website add,website link:- https://godcrafts.fun',
                 inline: true,
             },

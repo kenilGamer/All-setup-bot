@@ -1,3 +1,4 @@
+if (!global.File) global.File = require('buffer').File;
 /* 
 information for Discord bot
 const discord={`fast not api`}
@@ -122,8 +123,8 @@ require("./database/connect")();
 
 // Client settings
 client.config = require('./config/bot');
-client.changelogs = require('./config/changelogs');
-client.emotes = require("./config/emojis.json");
+try { client.changelogs = require('./config/changelogs'); } catch { client.changelogs = {}; }
+try { client.emotes = require("./config/emojis.json"); } catch { client.emotes = new Proxy({}, { get: (t, p) => new Proxy({}, { get: () => "" }) }); }
 client.webhooks = require("./config/webhooks.json");
 if (process.env.WEBHOOK_ID && process.env.WEBHOOK_TOKEN) {
     client.webhooks.startLogs.id = process.env.WEBHOOK_ID;
@@ -168,6 +169,7 @@ if (process.env.WEBHOOK_ID && process.env.WEBHOOK_TOKEN) {
     client.webhooks.interactionLogs.id = process.env.WEBHOOK_ID;
     client.webhooks.interactionLogs.token = process.env.WEBHOOK_TOKEN;
     
+    if (!client.webhooks.bugReportLogs) client.webhooks.bugReportLogs = {};
     client.webhooks.bugReportLogs.id = process.env.WEBHOOK_ID;
     client.webhooks.bugReportLogs.token = process.env.WEBHOOK_TOKEN;
 }
@@ -260,5 +262,4 @@ client.on(Discord.ShardEvents.Error, error => {
         embeds: [embed],
     });
 });
-
-//atuo kill
+//atuo kill if not responding for 30 minutes
